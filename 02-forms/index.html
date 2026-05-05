@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- For frontend forms (i.e, the form is not sent to the backend),
+    we won't use the <form> tag 
+    -->
+    <div>
+        <label>What's your name</label>
+        <input type="text" id="userName"/>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" id="userEmail"/>
+    </div>
+
+    <div>
+        <label>Age Group</label>
+        <input type="radio" name="age-group" value="young-adult" class="age-group"/><label>Young Adult (18 - 30)</label>
+        <input type="radio" name="age-group" value="middle-age" class="age-group"/><label>Middle Age (30 - 40)</label>
+        <input type="radio" name="age-group" value="young-senior" class="age-group"/><label>Young Senior and above (40+)</label>
+    </div>
+
+    <button id="submitBtn">Submit</button>
+    <script src="script.js"></script>
+</body>
+</html>
