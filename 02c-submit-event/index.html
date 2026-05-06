@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container">
+        <h1>BMI and Health Calculator</h1>
+        <!-- when we have a <form> element and we click on a button in it, the form
+            will be submitted to the URL -->
+        <form id="bmiForm">
+            <div class="mt-2">
+                <label>Email:</label>
+                <input name="email" type="email" id="email" class="form-control" />
+            </div>
+
+            <div class="mt-2">
+                <label>First Name</label>
+                <input name="firstName" type="text" id="firstName" class="form-control" />
+            </div>
+
+            <div class="mt-2">
+                <label>Last Name</label>
+                <input name="lastName" type="text" id="lastName" class="form-control" />
+            </div>
+
+            <div class="mt-2">
+                <label id="weight-label">Weight (kg)</label>
+                <input name="weight" type="number" id="weight" class="form-control" />
+            </div>
+
+            <div class="mt-2">
+                <label id="height-label">Height (m):</label>
+                <input name="height" type="text" id="height" class="form-control" />
+            </div>
+
+            <div class="mt-2">
+                <label>Use metric units or imperial unit</label>
+
+                <input type="radio" class="units" name="units" value="imperial">
+                <label>Imperial Units</label>
+
+                <input type="radio" class="units" name="units" value="metric" checked>
+                <label>Metric Unit</label>
+
+            </div>
+
+            <div class="mt-3">
+                <label>What are your health concerns?</label>
+                <div>
+                    <input type="checkbox" name="concerns" class="concerns" value="weight-issues" /> <label>Weight
+                        Issues</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="concerns" class="concerns" value="eating-healthly" /> <label>Eating
+                        Healthly</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="concerns" class="concerns" value="sleep" /> <label>Sleep
+                        Sleep</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="concerns" class="concerns" value="others" /> <label>
+                        Others</label>
+                </div>
+            </div>
+
+            <button id="submitBtn" class="btn btn-primary mt-2">Calculate BMI</button>
+
+        </form>
+
+        <div class="alert alert-success" id="result">
+            
+        </div>
+
+    </main>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Our own JavaScript is always the last one -->
+    <script src="script.js"></script>
+</body>
+
+</html>
