@@ -3,19 +3,19 @@ const tasks = [
         "id": 1,
         "name":"Wash the car",
         "dateDue":"06-06-2026",
-        "ugrency": 3
+        "urgency": 3
     },
         {
         "id": 2,
         "name":"Clean the bathroom",
         "dateDue":"07-06-2026",
-        "ugrency": 5
+        "urgency": 5
     },
         {
         "id": 1,
         "name":"Renew bank loan",
         "dateDue":"30-06-2026",
-        "ugrency": 1
+        "urgency": 1
     }
 ]
 
