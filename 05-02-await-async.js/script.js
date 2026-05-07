@@ -1,5 +1,6 @@
 const url = "https://raw.githubusercontent.com/kunxin-chor/data-files-and-stuff/master/fruits.txt";
 
+// load on the button press
 document.querySelector("#getDataBtn").addEventListener("click", async function () {
     // to use await, the function must be marked as async
     // tell JavaScript to pause in this function until the async operation finished
