@@ -1,0 +1,8 @@
+{
+    "movie": "Harry Potter",
+    "rating": "PG",
+    "duration": 180,
+    "screening": false,
+    "actors":["Daniel Radcliffe", "Emma Watson", "Michael Gambon"]
+    
+}
