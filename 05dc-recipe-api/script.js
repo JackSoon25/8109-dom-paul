@@ -1,4 +1,4 @@
-const API_KEY="sk_live_UvgSRQksGcGdfQJfmeSAUtwpXzoJxEF7c4wwiZEX27b067f5";
+const API_KEY="<place your API key here>";
 const API_BASE_URL="https://recipeapi.io/api/v1";
 
 
