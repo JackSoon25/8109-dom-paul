@@ -1,6 +1,6 @@
 const JSONBIN_API_URL="https://api.jsonbin.io/v3";
 const JSONBIN_ID="6a017ab2c0954111d806eddb";
-const MASTER_KEY="$2a$10$RQvbII54TwbfkyV4oKBA5u7RFa2F3RKqAM68GhDd.mQaKbc65ft3S";
+const MASTER_KEY="<place your MASTER KEY ID here>";
 
 // use `let` so that we re-assign to it
 let tasks = [
