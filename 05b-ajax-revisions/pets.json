@@ -1,0 +1,24 @@
+{
+    "pets": [
+        {
+            "id": 1,
+            "name":"Biscuit",
+            "species":"Golden Retriever"
+        },
+        {
+            "id": 2,
+            "name":"Fluffy",
+            "species": "Rabbit"
+        },
+        {
+            "id": 3,
+            "name":"Orange",
+            "species":"Orange cat"
+        },
+        {
+            "id": 4,
+            "name": "Geogre",
+            "species":"Monkey"
+        }
+    ]
+}
