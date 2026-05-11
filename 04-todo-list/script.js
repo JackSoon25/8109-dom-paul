@@ -1,6 +1,8 @@
 // DOMContentLoaded is an event that happens automatically when all the HTML elements have been created
 // in other words, when the event happens, the webpage is ready
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
+
+    tasks = await loadTasks();
     // the tasks array is from data.js global scope
     displayTasks(tasks);
 
@@ -11,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const urgency = document.querySelector("#urgency").value;
 
         addTask(tasks, name, dueDate, urgency);
+        saveTasks(tasks);
 
         displayTasks(tasks);
 
@@ -51,6 +54,7 @@ function displayTasks(tasks) {
         const deleteBtn = liElement.querySelector(".delete-btn");
         deleteBtn.addEventListener("click", function () {
             deleteTask(tasks, t.id);
+            saveTasks(tasks);
             displayTasks(tasks);
         })
 
@@ -100,6 +104,7 @@ function displayTasks(tasks) {
                     let newUrgency = document.querySelector("#newUrgency").value;
                     
                     updateTask(tasks, t.id, newTaskName, newDateDue, newUrgency);
+                    saveTasks(tasks);
                     displayTasks(tasks);
                 }
             });

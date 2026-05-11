@@ -1,22 +1,10 @@
-const tasks = [
-    {
-        "id": 1,
-        "name":"Wash the car",
-        "dateDue":"2026-06-06",
-        "urgency": 3
-    },
-        {
-        "id": 2,
-        "name":"Clean the bathroom",
-        "dateDue":"2026-06-07",
-        "urgency": 5
-    },
-        {
-        "id": 1,
-        "name":"Renew bank loan",
-        "dateDue":"2027-06-30",
-        "urgency": 1
-    }
+const JSONBIN_API_URL="https://api.jsonbin.io/v3";
+const JSONBIN_ID="6a017ab2c0954111d806eddb";
+const MASTER_KEY="$2a$10$RQvbII54TwbfkyV4oKBA5u7RFa2F3RKqAM68GhDd.mQaKbc65ft3S";
+
+// use `let` so that we re-assign to it
+let tasks = [
+   
 ]
 
 function addTask(tasks, newName, newDateDue, newUrgency) {
@@ -71,4 +59,20 @@ function updateTask(tasks, idToUpdate, newName, newDateDue, newUrgency) {
     if (indexToUpdate != -1) {
         tasks[indexToUpdate] = modifiedTask;
     }
+}
+
+async function loadTasks() {
+    const url = `${JSONBIN_API_URL}/b/${JSONBIN_ID}/latest`;
+    const response = await axios.get(url);
+    return response.data.record;
+}
+
+async function saveTasks(tasks) {
+    const response = await axios.put(`${JSONBIN_API_URL}/b/${JSONBIN_ID}`, tasks, {
+        headers: {
+            "Content-Type":"application/json",
+            "X-Master-Key": MASTER_KEY
+        }
+    })
+    return response.data;
 }
