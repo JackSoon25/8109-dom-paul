@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- Marker Clustering CSS -->
+    <link rel="stylesheet" href="MarkerClusterDefault.css"/>
+    <link rel="stylesheet" href="MarkerCluster.css"/>
+
+    <!-- Our own css -->
+    <link rel="stylesheet" href="styles.css"/>
+
+    </head>
+
+<body>
+    <div>Countdown to next refresh: <span id="countdown"></span></div>
+    <div id="singaporeMap"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- axios  -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.16.0/dist/axios.min.js"></script>
+
+    <!-- MarkerCluster JavaScript -->
+    <!-- As MarkerCluster is a plugin for Leaflet, it must go after the leaftlet JavaScript -->
+    <script src="MarkerCluster.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
